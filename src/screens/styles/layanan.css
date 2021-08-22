@@ -1,0 +1,64 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20pt;
+}
+
+.App-Image {
+  height: 50ex;
+  width: auto;
+  object-fit: contain;
+}
+
+.App-Button {
+  margin-top: 20;
+  height: 100pt;
+}
+
+.Welcome {
+  margin-top: -70pt;
+}
+.Welcome-Hide {
+  height: 30pt;
+}
+.text-welcome {
+  font-size: 24pt;
+  font-weight: bold;
+}
+.text-name {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.text-bantuan {
+  padding-top: 20;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.row-view {
+  flex-direction: row;
+  margin-top: 10pt;
+}
+
+.modal-setting {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+}
+
+.modal-title {
+  font-size: 18pt;
+  font-weight: bold;
+  margin-top: -30pt;
+  margin-bottom: 30pt;
+}
+
+.modal-view {
+  align-content: center;
+  padding: 50pt;
+  background-color: lightcyan;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10pt;
+}

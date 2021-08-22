@@ -1,0 +1,17 @@
+.Main {
+  background-color: blue;
+  padding: 10pt;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-Image {
+  margin-bottom: 10pt;
+}
+
+.App-Button {
+  margin-top: 20;
+  height: 100pt;
+}
