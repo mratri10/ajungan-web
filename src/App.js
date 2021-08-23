@@ -5,7 +5,7 @@ import history from "./core/history";
 
 function App() {
   return (
-    <Router history={history}>
+    <Router history={history} basename="https://mratri10.github.io/ajungan-web">
       <Routes />
     </Router>
   );
