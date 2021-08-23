@@ -1,4 +1,4 @@
-import { Button, makeStyles, Modal, useTheme } from "@material-ui/core";
+import { Button, Grid, makeStyles, Modal, useTheme } from "@material-ui/core";
 import React, { useState } from "react";
 import "../styles/layanan.css";
 
@@ -12,25 +12,29 @@ function Pendaftaran({ onPilih }) {
       <div className="text-bantuan">
         Apakah anda Memiliki Penjaminan untuk biaya pelayanan ?
       </div>
-      <div className="row-view">
-        <Button
-          color="primary"
-          variant="contained"
-          style={{ width: 250, marginRight: 10, height: 80 }}
-          onClick={() => onPilih("pilih-dokter")}
-          // onClick={() => setAlertBayar(true)}
-        >
-          Tidak, Saya Bayar Sendiri
-        </Button>
-        <Button
-          color="primary"
-          variant="contained"
-          style={{ width: 250, marginLeft: 10, height: 80 }}
-          onClick={() => onPilih("penjamin")}
-        >
-          Ya, Saya memiliki Penjamin untuk Biaya Pelayanan
-        </Button>
-      </div>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item>
+          <Button
+            color="primary"
+            variant="contained"
+            style={{ width: 250, height: 80 }}
+            onClick={() => onPilih("pilih-dokter")}
+            // onClick={() => setAlertBayar(true)}
+          >
+            Tidak, Saya Bayar Sendiri
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            color="primary"
+            variant="contained"
+            style={{ width: 250, height: 80 }}
+            onClick={() => onPilih("penjamin")}
+          >
+            Ya, Saya memiliki Penjamin untuk Biaya Pelayanan
+          </Button>
+        </Grid>
+      </Grid>
 
       <Modal
         className={classes.modal}

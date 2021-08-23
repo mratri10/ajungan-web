@@ -28,7 +28,7 @@ function HomeScreen(props) {
             variant="contained"
             style={{ height: 60, marginTop: 10, background: "orange" }}
           >
-            <h2>Dekatkan Kartu Berobat Anda Pada Mesin Scanner Kami</h2>
+            Dekatkan Kartu Berobat Anda Pada Mesin Scanner Kami
           </Button>
         </div>
       </Container>

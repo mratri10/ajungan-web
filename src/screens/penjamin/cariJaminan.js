@@ -17,24 +17,33 @@ function CariJaminan({ onPilih }) {
   };
   return (
     <div>
-      <Grid style={{ marginTop: 20 }}>
-        <Button
-          onClick={() => onPilih("")}
-          color="primary"
-          variant="contained"
-          style={{ width: 200, marginLeft: 10, height: 60 }}
-        >
-          Kembali ke Menu Utama
-        </Button>
-        {/* <Box ml={2} mr={2} width={400}> */}
-        <TextField
-          //   fullWidth
-          style={{ width: 700, marginLeft: 10, height: 50 }}
-          variant="outlined"
-          onChange={(text) => setCari(text.target.value)}
-          placeholder="Silahkan Masukkan Penjamin yang anda kehendaki"
-          value={cari}
-        />
+      <Grid
+        style={{ marginTop: 20, marginBottom: 20 }}
+        container
+        spacing={2}
+        justifyContent="center"
+      >
+        <Grid item md={2}>
+          <Button
+            onClick={() => onPilih("")}
+            color="primary"
+            variant="contained"
+            style={{ marginLeft: 10, height: 60 }}
+          >
+            Kembali ke Menu Utama
+          </Button>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <TextField
+            fullWidth
+            style={{ marginLeft: 10, height: 50 }}
+            variant="outlined"
+            onChange={(text) => setCari(text.target.value)}
+            placeholder="Silahkan Masukkan Penjamin yang anda kehendaki"
+            value={cari}
+          />
+        </Grid>
+
         {/* </Box> */}
       </Grid>
       <GridList

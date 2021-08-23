@@ -48,33 +48,43 @@ function CariDokter({ onPilih, poli, onPoli }) {
   };
   return (
     <div>
-      <Grid style={{ marginTop: 20 }}>
-        <Button
-          onClick={() => onPilih("")}
-          color="primary"
-          variant="contained"
-          style={{ width: 200, marginLeft: 10, height: 60 }}
-        >
-          Kembali ke Menu Utama
-        </Button>
-        {/* <Box ml={2} mr={2} width={400}> */}
-        <TextField
-          //   fullWidth
-          style={{ width: 500, marginLeft: 10, height: 50 }}
-          variant="outlined"
-          onChange={(text) => setCari(text.target.value)}
-          placeholder="Silahkan Masukan Nama Dokter yang Dikehendaki"
-          value={cari}
-        />
-        {/* </Box> */}
-        <Button
-          onClick={() => onPilih("pilih-poli")}
-          color="primary"
-          variant="contained"
-          style={{ width: 200, marginLeft: 10, height: 60 }}
-        >
-          Pilih Poliklinik
-        </Button>
+      <Grid
+        style={{ marginTop: 20, marginBottom: 20 }}
+        container
+        spacing={2}
+        justifyContent="center"
+      >
+        <Grid item md={2}>
+          <Button
+            onClick={() => onPilih("")}
+            color="primary"
+            variant="contained"
+            style={{ marginLeft: 10, height: 60 }}
+          >
+            Kembali ke Menu Utama
+          </Button>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <TextField
+            fullWidth
+            style={{ marginLeft: 10, height: 50 }}
+            variant="outlined"
+            onChange={(text) => setCari(text.target.value)}
+            placeholder="Silahkan Masukan Nama Dokter yang Dikehendaki"
+            value={cari}
+          />
+        </Grid>
+
+        <Grid item md={2}>
+          <Button
+            onClick={() => onPilih("pilih-poli")}
+            color="primary"
+            variant="contained"
+            style={{ marginLeft: 10, height: 60 }}
+          >
+            Pilih Poliklinik
+          </Button>
+        </Grid>
       </Grid>
       {poli && (
         <Grid container spacing={2} style={{ justifyContent: "center" }}>
