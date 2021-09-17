@@ -5,18 +5,22 @@ import "../styles/layanan.css";
 import staffIMG from "../../assets/images/staff.PNG";
 import { useHistory } from "react-router-dom";
 const dataButton = [
-  { name: "Daftar Kehadiran Dokter", nav: "" },
-  { name: "Pendaftaran Pelayanan", nav: "pendaftaran" },
-  { name: "Informasi Promo Layanan", nav: "" },
-  { name: "Reservasi Pelayanan", nav: "reservasi" },
-  { name: "Laporan Kehadiran [Chec in]", nav: "" },
-  { name: "Cetak Layanan Sampai Saat ini", nav: "" },
+  { name: "Daftar Kehadiran Dokter", nav: "jadwal-dokter", modelNav: true },
+  { name: "Pendaftaran Pelayanan", nav: "pendaftaran", modelNav: false },
+  { name: "Informasi Promo Layanan", nav: "", modelNav: false },
+  { name: "Reservasi Pelayanan", nav: "reservasi", modelNav: false },
+  { name: "Laporan Kehadiran [Chec in]", nav: "", modelNav: false },
+  { name: "Cetak Layanan Sampai Saat ini", nav: "", modelNav: false },
 ];
 function LayananUtama({ onPilih }) {
   let history = useHistory();
 
   const layananKu = (respons) => {
-    onPilih(respons.nav);
+    if (respons.modelNav) {
+      history.push("jadwal-dokter");
+    } else {
+      onPilih(respons.nav);
+    }
   };
   return (
     <div>
